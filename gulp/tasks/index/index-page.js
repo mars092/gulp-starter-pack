@@ -7,7 +7,7 @@ const task = () => {
   delete require.cache[require.resolve('../../../' + config.src.pagelist)];
   const pages = require('../../../' + config.src.pagelist);
   return gulp
-    .src(__dirname + '/index.html')
+    .src(__dirname + '/view-pages.html')
     .pipe(
       consolidate('lodash', {
         pages: pages,
