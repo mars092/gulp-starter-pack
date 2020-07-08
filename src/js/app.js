@@ -44,54 +44,39 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     app.transitionCompleted = function() {
-      APP.Plugins.AOS.refresh();
+      // APP.Plugins.AOS.refresh();
       app.onLoadTrigger();
     };
 
     // Global plugins which must be initialized once
     app.initGlobalPlugins = function() {
-      APP.Dev.Credentials.logCredentials();
-      APP.Dev.Breakpoint.listenResize();
+      // APP.Dev.Credentials.logCredentials();
+      // APP.Dev.Breakpoint.listenResize();
       APP.Browser().methods.setBodyTags();
       APP.Plugins.LegacySupport.init();
-      APP.Plugins.ScrollBlock.listenScroll();
+      // APP.Plugins.ScrollBlock.listenScroll();
       APP.Plugins.Clicks.init();
-      APP.Plugins.AOS.init();
-      APP.Plugins.Barba.init();
+      // APP.Plugins.AOS.init();
+      // APP.Plugins.Barba.init();
     };
 
     // Plugins which depends on DOM and page content
     app.initPlugins = function(fromPjax) {
-      APP.Plugins.Teleport.init();
+      // APP.Plugins.Teleport.init();
       APP.Plugins.Sliders.init(fromPjax);
       APP.Plugins.Modals.init();
       APP.Plugins.Masks.init();
-      APP.Plugins.Selectric.init();
-      APP.Plugins.LazyLoadImages.init();
-      APP.Plugins.TextareaAutoExpand.init();
-      APP.Plugins.Validations.init();
+      // APP.Plugins.Selectric.init();
+      // APP.Plugins.LazyLoadImages.init();
+      // APP.Plugins.TextareaAutoExpand.init();
+      // APP.Plugins.Validations.init();
       APP.Plugins.LegacySupport.fixImages();
 
-      // APP.Plugins.ScrollReveal.init();
-      // APP.Plugins.Ymaps.init();
-      // APP.Plugins.Countdown.init();
-      // APP.Plugins.FooterReveal.init();
-      // APP.Plugins.ScalerDesktop.init(fromPjax);
-
-      // plugins
-      // APP.Plugins.Sticky.init(fromPjax);
-      // APP.Plugins.Photoswipe.init(fromPjax);
-      // APP.Plugins.DatePicker.init(fromPjax);
-
-      // ui
-      // APP.Plugins.Clipboard.init();
-      // APP.Plugins.InputFocuses.init();
     };
 
     // All components from `src/componenets`
     app.initComponents = function(fromPjax) {
-      APP.Components.Header.init(fromPjax);
-      APP.Components.Test.init();
+      // APP.Components.Header.init(fromPjax);
     };
 
     return app;

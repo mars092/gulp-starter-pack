@@ -2,32 +2,21 @@
   box-sizing: border-box
   outline: none
 
-// FOUC like fix (prevent transition from default browser values)
-body:not(.is-ready)
-  *
-    transition: none !important
-
 a
   color: inherit
   text-decoration: none
   &:hover, &:focus
     text-decoration: none
 
-ul
-  list-style: none
-  li
-    display: inline-block
-
 body, html
-  background: white
-  color: $fontColor
-  font-family: $baseFont
-  // font-family: "Helvetica", -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Ubuntu', 'Cantarell', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'
-  font-size: 16px
+  overflow-x: hidden
   min-width: 320px
   max-width: 100%
+  color: $fontColor
+  font-family: $baseFont
+  font-size: 16px
   margin: 0
-  overflow-x: hidden
+  background: white
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
@@ -35,29 +24,11 @@ body, html
   color: white
   background: $colorPrimary
 
-.is-ios
-  cursor: pointer
-  *
-    cursor: pointer
-
-.body-lock
-  height: 100%
-  overflow: hidden
-  position: fixed
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  width: 100%
-  &.is-mobile
-    overflow: visible
-
 .page
   display: flex
   flex-direction: column
   min-height: 100vh
   &__content
-    // used for sticky footer (flexbox way)
     flex: 1 0 auto
     display: flex
     flex-direction: column
@@ -67,32 +38,10 @@ body, html
 .container
   max-width: 1200px
   width: 100%
-  margin-left: auto
-  margin-right: auto
-  padding-left: 40px
-  padding-right: 40px
+  margin: 0 auto
+  padding: 0 40px
+  +r($sm)
+    padding: 0 20px
 
-+r($sm)
-  .container
-    padding-left: 20px
-    padding-right: 20px
-
-// REMOVE FOR PRODUCTION !
-.dev-bp-debug
-  background: black
-  position: fixed
-  top: 0
-  right: 0
-  z-index: 9999
-  color: white
-  padding: 5px
-  font-size: 12px
-  border-bottom-left-radius: 5px
-  + .dev-bp-debug
-    top: 25px
-    + .dev-bp-debug
-      top: 50px
-      + .dev-bp-debug
-        top: 75px
-        + .dev-bp-debug
-          top: 100px
+.ovh
+  overflow: hidden

@@ -1,24 +1,20 @@
 include ../utilities/_mixins
 doctype html
-html(lang="en")
+html(lang="ru")
   head
     include _head
 
   body
-    // place where pjax bindings happen's
-    #barba-wrapper
+    .ovh
       block header
         include ../../components/header/_header
 
-      // what should be changed with every pjax
       .page(class=outClass)
         .page__content
           block content
 
         block footer
           include ../../components/footer/_footer
-
-      include ../../components/demoGrid/_demoGrid
 
       block scripts
         include _scripts

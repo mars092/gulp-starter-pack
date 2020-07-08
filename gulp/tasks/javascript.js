@@ -31,13 +31,13 @@ const webpackConfig = {
   },
   // some jquery plugins doesnt work with expose-loader
   // Try uncommenting below if nothing else helps
-  // plugins: [
-  //   new webpack.ProvidePlugin({
-  //     $: 'jquery',
-  //     jQuery: 'jquery',
-  //     'window.jQuery': 'jquery',
-  //   }),
-  // ],
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
+  ],
 };
 
 const javascriptVendor = () =>

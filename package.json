@@ -18,10 +18,13 @@
     "deploy": "gulp build --production && surge --project ./dist --domain khmelevskoy.surge.sh"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "air-datepicker": "^2.2.3",
     "aos": "^2.3.4",
     "autofill-event": "^0.0.1",
     "barba.js": "^1.0.0",
+    "bem-tools-core": "0.0.3",
+    "bem-tools-create": "^2.3.0",
     "clipboard": "^2.0.6",
     "gsap": "^2.0.2",
     "jquery": "^3.4.1",
